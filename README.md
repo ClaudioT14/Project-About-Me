@@ -1,30 +1,23 @@
 # Project-About-Me
 Pagina web sobre mi perfil.
 
-Información general del proyecto (qué hace, quién lo escribió, quiénes colaboraron, y qué herramientas se utilizaron)
-## Informacion del Proyecto:
->_Este proyecto hace que las personas puedan conocerme un poco mas y saber de mis logros, este proyecto fue realizado por Claudio Tapia.
-Instrucciones para su instalación y uso
-Informaciónn sobre la licencia
-Reconocimientos, etc.
-
-
 ## About Me.
 
 Construi una pagina web, que cumple con informar todo acerca de mi, este proyecto fue elaborado por Claudio Tapia, el cual utilizo distintos lenguajes como HTML, CSS y JavaScript.
 
 ### Autor: Claudio Tapia
 
-### Enlaces y Recursos
+### Enlaces y Recursos:
 
-* [envío del PR](http://xyz.com)
-* Cualquier enlace que hayas usado como referencia
+* [Enlace al Proyecto](https://github.com/ClaudioT14/Project-About-Me)
 
-### Puntuación de Accesibilidad de Lighthouse
+* https://meakaakka.medium.com/a-beginners-guide-to-writing-a-kickass-readme-7ac01da88ab3
 
-* Propociona una captura de pantalla de tu puntuación después de ejecutar un informe de Accesibilidad de Lighthouse.
+### Puntuación de Accesibilidad de Lighthouse:
+Puntuacion: 98
+
+* ![Descripción de la imagen](/img/Puntuación%20de%20Accesibilidad%20de%20Lighthouse.png)
 
 ### Reflexiones y Comentarios
 
-* Considera incluir las respuestas a las preguntas a tu registro de aprendizaje y de tus envíos previos
-* Este también es un buen lugar para reflexionar sobre las herramientras y recursos que utilizaste y aprendiste
+* En este proyecto mejore mi codigo en el lenguaje de JavaScript, ya que se me dificulta un poco, pero logre conseguir el primer avance, espero poder seguir asi y mejorar con el tiempo.
