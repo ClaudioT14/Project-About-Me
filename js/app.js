@@ -15,7 +15,7 @@ const respuestaGuitarra = "no";
 
 //Preguntas: usar function para reducir
 const question1 = prompt("Me gusta el Futbol?");
-if (respuestaFutbol.toLowerCase() === question1.toLowerCase()) { 
+if (respuestaFutbol.toLowerCase() === question1.toLowerCase()) {
     alert("Muy Bien");
     console.log(" Muy Bien")
 } else {
@@ -24,7 +24,7 @@ if (respuestaFutbol.toLowerCase() === question1.toLowerCase()) {
 }
 
 const question2 = prompt("Mi segundo nombre es Renato?");
-if (respuestaRenato.toLowerCase() === question2.toLowerCase()) { 
+if (respuestaRenato.toLowerCase() === question2.toLowerCase()) {
     alert("Muy Bien");
     console.log(" Muy Bien")
 } else {
@@ -33,7 +33,7 @@ if (respuestaRenato.toLowerCase() === question2.toLowerCase()) {
 }
 
 const question3 = prompt("Me gusta el Rock?");
-if (respuestaRock.toLowerCase() === question3.toLowerCase()) { 
+if (respuestaRock.toLowerCase() === question3.toLowerCase()) {
     alert("Muy Bien");
     console.log(" Muy Bien")
 } else {
@@ -42,7 +42,7 @@ if (respuestaRock.toLowerCase() === question3.toLowerCase()) {
 }
 
 const question4 = prompt("Tengo un perro?");
-if (respuestaPerro.toLowerCase() === question4.toLowerCase()) { 
+if (respuestaPerro.toLowerCase() === question4.toLowerCase()) {
     alert("Muy Bien");
     console.log(" Muy Bien")
 } else {
@@ -51,7 +51,7 @@ if (respuestaPerro.toLowerCase() === question4.toLowerCase()) {
 }
 
 const question5 = prompt("Toco guitarra?");
-if (respuestaGuitarra.toLowerCase() === question5.toLowerCase()) { 
+if (respuestaGuitarra.toLowerCase() === question5.toLowerCase()) {
     alert("Muy Bien");
     console.log(" Muy Bien")
 } else {
@@ -65,7 +65,7 @@ const numeroCorrecto = 7;
 let contadorIntentos = 1;
 
 while (contadorIntentos <= maxNumeroIntentos) {
-    const numeroUsuario = Number (prompt("Ingrese un numero del 1 al 10"));
+    const numeroUsuario = Number(prompt("Ingrese un numero del 1 al 10"));
 
     if (numeroUsuario === numeroCorrecto) {
         alert("Felicidades conseguiste adivinar el numero " + numeroCorrecto)
@@ -88,25 +88,30 @@ while (contadorIntentos <= maxNumeroIntentos) {
     }
 }
 
-const respuestasCorrectas=["rojo", "naranja", "morado"];
+const respuestasCorrectas = ["rojo", "naranja", "morado"];
 let contadorDeIntentos = 0;
+let condicion = false;
 
-for (let i=0; i<6;i++){
-const respuestaUsuario = prompt("Adivina uno de mis colores favoritos");
-for(let j=0;j<respuestasCorrectas.length;j++){
-    if (respuestaUsuario.toLowerCase()===respuestasCorrectas[j].toLowerCase()){
+for (let i = 0; i < 6; i++) {
+    const respuestaUsuario = prompt("Adivina uno de mis colores favoritos");
+    contadorDeIntentos++;
+    for (let j = 0; j < respuestasCorrectas.length; j++) {
+        if (respuestaUsuario.toLowerCase() === respuestasCorrectas[j].toLowerCase()) {
+            alert("Lo lograste en " + contadorDeIntentos + " intentos");
+            condicion = true;
+            break;
+        }
+    }
+
+    if (condicion) {
         alert("¡Felicidades! Adivinaste uno de mis colores favoritos!");
         break;
-        //contadorDeIntentos++;
-        //alert("Lo lograste en " + contadorDeIntentos  + " intentos");
+    } else if (contadorDeIntentos === 5) {
+        alert("te quedastes sin intentos");
+    } else {
+        alert("sigue intentado");
     }
-}
-if (i===5){
-    alert("Llegaste al límite de intentos :(");
-}
-else{
-    alert("Sigue intentando");
-}
+
 }
 /*// usar for
 const maxNumeroDeIntentos = 6;
