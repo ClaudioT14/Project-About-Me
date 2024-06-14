@@ -5,7 +5,7 @@ let question = prompt("¿Cual es tu nombre?");
 alert("Hola, " + question + " un gusto que estes aqui");
 
 
-// Respuestas:
+// Respuestas: usar function para reducir
 const respuestaFutbol = "si";
 const respuestaRenato = "no";
 const respuestaRock = "si";
@@ -13,7 +13,7 @@ const respuestaPerro = "si";
 const respuestaGuitarra = "no";
 
 
-//Preguntas:
+//Preguntas: usar function para reducir
 const question1 = prompt("Me gusta el Futbol?");
 if (respuestaFutbol.toLowerCase() === question1.toLowerCase()) { 
     alert("Muy Bien");
@@ -88,8 +88,27 @@ while (contadorIntentos <= maxNumeroIntentos) {
     }
 }
 
+const respuestasCorrectas=["rojo", "naranja", "morado"];
+let contadorDeIntentos = 0;
 
-
+for (let i=0; i<6;i++){
+const respuestaUsuario = prompt("Adivina uno de mis colores favoritos");
+for(let j=0;j<respuestasCorrectas.length;j++){
+    if (respuestaUsuario.toLowerCase()===respuestasCorrectas[j].toLowerCase()){
+        alert("¡Felicidades! Adivinaste uno de mis colores favoritos!");
+        break;
+        //contadorDeIntentos++;
+        //alert("Lo lograste en " + contadorDeIntentos  + " intentos");
+    }
+}
+if (i===5){
+    alert("Llegaste al límite de intentos :(");
+}
+else{
+    alert("Sigue intentando");
+}
+}
+/*// usar for
 const maxNumeroDeIntentos = 6;
 const respuestasCorrectas = ["rojo", "naranja", "morado"];
 let contadorDeIntentos = 1;
