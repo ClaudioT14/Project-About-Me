@@ -1,62 +1,77 @@
 'use strict';
 
+function comprararRespuesta(textoDePregunta) {
+    const question = prompt(textoDePregunta);
+    if (afirmacion.toLowerCase() === question.toLowerCase()) {
+        alert("Muy Bien");
+        console.log(" Muy Bien")
+    } else {
+        alert("Respuesta Incorrrecta");
+        console.log("Respuesta Incorrecta")
+    }
+
+}
+
 //Saludo.
-let question = prompt("¿Cual es tu nombre?");
-alert("Hola, " + question + " un gusto que estes aqui");
+function preguntarNombre() {
+    let question = prompt("¿Cual es tu nombre?");
+    alert("Hola, " + question + " un gusto que estes aqui");
+}
+//Para ejecutar una funcion debemos llamar a esta.
 
 
-// Respuestas:
-const respuestaFutbol = "si";
-const respuestaRenato = "no";
-const respuestaRock = "si";
-const respuestaPerro = "si";
-const respuestaGuitarra = "no";
-
-
+//Podemos crear una variable para opcion de afirmacion y otra para la negacion.
+//Usar camellCase cuando creemos variables.
+//Respuestas:
+const afirmacion = "Si"
+const negacion = "No"
+//VERSION1
 //Preguntas:
-const question1 = prompt("Me gusta el Futbol?");
-if (respuestaFutbol.toLowerCase() === question1.toLowerCase()) { 
-    alert("Muy Bien");
-    console.log(" Muy Bien")
-} else {
-    alert("Respuesta Incorrrecta");
-    console.log("Respuesta Incorrecta")
-}
+//function preguntarFutbol() {
+//  comprararRespuesta("Me gusta el Futbol?")
+//}
 
-const question2 = prompt("Mi segundo nombre es Renato?");
-if (respuestaRenato.toLowerCase() === question2.toLowerCase()) { 
-    alert("Muy Bien");
-    console.log(" Muy Bien")
-} else {
-    alert("Respuesta Incorrrecta");
-    console.log("Respuesta Incorrecta")
-}
+//function preguntarSegundoNombre() {
+//    comprararRespuesta("Me gusta viajar?")
+//}
 
-const question3 = prompt("Me gusta el Rock?");
-if (respuestaRock.toLowerCase() === question3.toLowerCase()) { 
-    alert("Muy Bien");
-    console.log(" Muy Bien")
-} else {
-    alert("Respuesta Incorrrecta");
-    console.log("Respuesta Incorrecta")
-}
+//function preguntarRock() {
+//    comprararRespuesta("Me gusta el Rock?")
+//}
 
-const question4 = prompt("Tengo un perro?");
-if (respuestaPerro.toLowerCase() === question4.toLowerCase()) { 
-    alert("Muy Bien");
-    console.log(" Muy Bien")
-} else {
-    alert("Respuesta Incorrrecta");
-    console.log("Respuesta Incorrecta")
-}
+//function preguntarPerro() {
+//    comprararRespuesta("Tengo un perro?")
+//}
 
-const question5 = prompt("Toco guitarra?");
-if (respuestaGuitarra.toLowerCase() === question5.toLowerCase()) { 
-    alert("Muy Bien");
-    console.log(" Muy Bien")
-} else {
-    alert("Respuesta Incorrrecta");
-    console.log("Respuesta Incorrecta")
+//function preguntarGuitarra() {
+//    comprararRespuesta("Vivo en Lima?")
+//}
+//VERSION2
+//preguntarNombre();
+//preguntarFutbol();
+//preguntarSegundoNombre();
+//preguntarRock();
+//preguntarPerro();
+//preguntarGuitarra();
+//VERSION3
+//preguntarNombre();
+//comprararRespuesta("Me gusta el Futbol?")
+//comprararRespuesta("Me gusta viajar?")
+//comprararRespuesta("Me gusta el Rock?")
+//comprararRespuesta("Tengo un perro?")
+//comprararRespuesta("Vivo en Lima?")
+//VERSION3
+const preguntas = [
+    "Me gusta el Futbol?",
+    "Me gusta viajar?",
+    "Me gusta el Rock?",
+    "Tengo un perro?",
+    "Vivo en Lima?"
+];
+preguntarNombre();
+
+for (let i = 0; i < preguntas.length; i++) {
+    comprararRespuesta(preguntas[i]);
 }
 
 
@@ -65,7 +80,7 @@ const numeroCorrecto = 7;
 let contadorIntentos = 1;
 
 while (contadorIntentos <= maxNumeroIntentos) {
-    const numeroUsuario = Number (prompt("Ingrese un numero del 1 al 10"));
+    const numeroUsuario = Number(prompt("Ingrese un numero del 1 al 10"));
 
     if (numeroUsuario === numeroCorrecto) {
         alert("Felicidades conseguiste adivinar el numero " + numeroCorrecto)
@@ -106,7 +121,7 @@ while (contadorDeIntentos < maxNumeroDeIntentos) {
     } else {
         contadorDeIntentos++;
         if (contadorDeIntentos === maxNumeroDeIntentos) {
-        alert("Llegaste al límite de intentos :(");
+            alert("Llegaste al límite de intentos :(");
         }
     }
 }
