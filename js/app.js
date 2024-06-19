@@ -13,6 +13,7 @@ function comprararRespuesta(textoDePregunta) {
 }
 
 //Saludo.
+<<<<<<< HEAD
 function preguntarNombre() {
     let question = prompt("¿Cual es tu nombre?");
     alert("Hola, " + question + " un gusto que estes aqui");
@@ -72,6 +73,64 @@ preguntarNombre();
 
 for (let i = 0; i < preguntas.length; i++) {
     comprararRespuesta(preguntas[i]);
+=======
+let question = prompt("¿Cual es tu nombre?");
+alert("Hola, " + question + " un gusto que estes aqui");
+
+
+// Respuestas: usar function para reducir
+const respuestaFutbol = "si";
+const respuestaRenato = "no";
+const respuestaRock = "si";
+const respuestaPerro = "si";
+const respuestaGuitarra = "no";
+
+
+//Preguntas: usar function para reducir
+const question1 = prompt("Me gusta el Futbol?");
+if (respuestaFutbol.toLowerCase() === question1.toLowerCase()) {
+    alert("Muy Bien");
+    console.log(" Muy Bien")
+} else {
+    alert("Respuesta Incorrrecta");
+    console.log("Respuesta Incorrecta")
+}
+
+const question2 = prompt("Mi segundo nombre es Renato?");
+if (respuestaRenato.toLowerCase() === question2.toLowerCase()) {
+    alert("Muy Bien");
+    console.log(" Muy Bien")
+} else {
+    alert("Respuesta Incorrrecta");
+    console.log("Respuesta Incorrecta")
+}
+
+const question3 = prompt("Me gusta el Rock?");
+if (respuestaRock.toLowerCase() === question3.toLowerCase()) {
+    alert("Muy Bien");
+    console.log(" Muy Bien")
+} else {
+    alert("Respuesta Incorrrecta");
+    console.log("Respuesta Incorrecta")
+}
+
+const question4 = prompt("Tengo un perro?");
+if (respuestaPerro.toLowerCase() === question4.toLowerCase()) {
+    alert("Muy Bien");
+    console.log(" Muy Bien")
+} else {
+    alert("Respuesta Incorrrecta");
+    console.log("Respuesta Incorrecta")
+}
+
+const question5 = prompt("Toco guitarra?");
+if (respuestaGuitarra.toLowerCase() === question5.toLowerCase()) {
+    alert("Muy Bien");
+    console.log(" Muy Bien")
+} else {
+    alert("Respuesta Incorrrecta");
+    console.log("Respuesta Incorrecta")
+>>>>>>> f9b5c73c44627e418608d96e428b56833433ba14
 }
 
 
@@ -103,8 +162,32 @@ while (contadorIntentos <= maxNumeroIntentos) {
     }
 }
 
+const respuestasCorrectas = ["rojo", "naranja", "morado"];
+let contadorDeIntentos = 0;
+let condicion = false;
 
+for (let i = 0; i < 6; i++) {
+    const respuestaUsuario = prompt("Adivina uno de mis colores favoritos");
+    contadorDeIntentos++;
+    for (let j = 0; j < respuestasCorrectas.length; j++) {
+        if (respuestaUsuario.toLowerCase() === respuestasCorrectas[j].toLowerCase()) {
+            alert("Lo lograste en " + contadorDeIntentos + " intentos");
+            condicion = true;
+            break;
+        }
+    }
 
+    if (condicion) {
+        alert("¡Felicidades! Adivinaste uno de mis colores favoritos!");
+        break;
+    } else if (contadorDeIntentos === 5) {
+        alert("te quedastes sin intentos");
+    } else {
+        alert("sigue intentado");
+    }
+
+}
+/*// usar for
 const maxNumeroDeIntentos = 6;
 const respuestasCorrectas = ["rojo", "naranja", "morado"];
 let contadorDeIntentos = 1;
